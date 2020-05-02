@@ -1,0 +1,19 @@
+#using the ubuntu 18.04
+dist: bionic
+
+#installing the terraform package
+before_install:
+  - sudo apt-get -q update
+  - sudo apt-get install wget unzip
+  - export VER="0.12.24"
+  - wget https://releases.hashicorp.com/terraform/${VER}/terraform_${VER}_linux_amd64.zip
+  - unzip terraform_${VER}_linux_amd64.zip
+  - sudo mv terraform /usr/local/bin/
+
+git:
+  quiet: true
+
+script:
+  - cd aws && terraform init
+  - terraform plan
+  - terraform apply -var-file="input.tfvars" -auto-approve
