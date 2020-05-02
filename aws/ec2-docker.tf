@@ -25,7 +25,7 @@ resource "aws_instance" "web" {
   key_name = var.ssh-key
 
   tags = {
-    Name = "docker"
+    Name = var.ec2-name
   }
   user_data = file("script.sh")
 
