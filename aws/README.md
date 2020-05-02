@@ -1,4 +1,7 @@
-Terraform files.
+##### Architecture Diagram:
+[![architeture-diagram](architecture "architeture-diagram")](https://github.com/chandansingh1653/terraform-scripts/blob/master/aws/images/architecture-diagram.png "architeture-diagram")
+
+##### Terraform files.
 
 | File Name     | Description                                                          |
 |---------------|----------------------------------------------------------------------|
